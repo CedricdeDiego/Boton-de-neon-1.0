@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirigiendo...</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script>
+        let count = 3;
+        function updateCounter() {
+            if (count > 0) {
+                document.getElementById("contador").innerText = count;
+                count--;
+                setTimeout(updateCounter, 1000);
+            } else {
+                window.location.href = "https://www.instagram.com/cedric.de.diego/";
+            }
+        }
+        window.onload = updateCounter;
+    </script>
+</head>
+<body>
+    <div class="contador-container">
+        <h1 id="contador">3</h1>
+        <p class="redirigiendo">Dirigiéndose a Instagram de <span class="nombre">Cedric.de.Diego</span></p>
+    </div>
+</body>
+</html>
